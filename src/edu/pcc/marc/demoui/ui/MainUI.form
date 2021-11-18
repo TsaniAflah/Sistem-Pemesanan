@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="edu.pcc.marc.demoui.ui.MainUI">
-  <grid id="27dc6" binding="rootPanel" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="rootPanel" layout-manager="GridLayoutManager" row-count="6" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="948" height="531"/>
+      <xy x="20" y="20" width="1035" height="861"/>
     </constraints>
     <properties>
       <background color="-463389"/>
@@ -46,7 +46,7 @@
       <grid id="d7de" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="5" left="10" bottom="5" right="10"/>
         <constraints>
-          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-11773621"/>
@@ -80,7 +80,7 @@
       <grid id="574d5" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="15" left="30" bottom="15" right="30"/>
         <constraints>
-          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="1" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-8812681"/>
@@ -109,34 +109,6 @@
               </component>
             </children>
           </scrollpane>
-        </children>
-      </grid>
-      <grid id="f2b8b" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="0">
-        <margin top="5" left="10" bottom="5" right="10"/>
-        <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="true"/>
-        </constraints>
-        <properties>
-          <background color="-4336970"/>
-          <foreground color="-4336970"/>
-        </properties>
-        <border type="none"/>
-        <children>
-          <component id="28d6f" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-3093838"/>
-              <editable value="false"/>
-              <font name="Britannic Bold" style="1"/>
-              <foreground color="-16777216"/>
-              <model>
-                <item value="CREADIT FOR GROUP 3"/>
-                <item value="Tsani Aflah(2008107010015)"/>
-              </model>
-            </properties>
-          </component>
         </children>
       </grid>
       <grid id="c39d" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -171,10 +143,10 @@
           </scrollpane>
         </children>
       </grid>
-      <grid id="fd89d" layout-manager="GridLayoutManager" row-count="6" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="fd89d" layout-manager="GridLayoutManager" row-count="10" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="0" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-1712957"/>
@@ -194,7 +166,7 @@
           </component>
           <component id="d04c7" class="javax.swing.JCheckBox" binding="asinCheckBox" default-binding="true">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-8494264"/>
@@ -205,7 +177,7 @@
           </component>
           <component id="a14b" class="javax.swing.JCheckBox" binding="gurihCheckBox" default-binding="true">
             <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-8494264"/>
@@ -216,7 +188,7 @@
           </component>
           <component id="e1e73" class="javax.swing.JCheckBox" binding="manisCheckBox" default-binding="true">
             <constraints>
-              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-8494264"/>
@@ -228,7 +200,7 @@
           </component>
           <component id="e586f" class="javax.swing.JCheckBox" binding="pahitCheckBox" default-binding="true">
             <constraints>
-              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-8494264"/>
@@ -239,12 +211,13 @@
           </component>
           <component id="b3b29" class="javax.swing.JCheckBox" binding="pedasCheckBox" default-binding="true">
             <constraints>
-              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-8494264"/>
               <font name="Consolas"/>
               <foreground color="-1712957"/>
+              <selected value="false"/>
               <text value="Pedas"/>
             </properties>
           </component>
@@ -255,70 +228,121 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-1712957"/>
+              <background color="-4798797"/>
               <editable value="false"/>
               <enabled value="true"/>
-              <font name="Lucida Sans Unicode" size="10"/>
+              <font name="Consolas" size="10"/>
             </properties>
           </component>
           <component id="98702" class="javax.swing.JTextField" binding="textField2" default-binding="true">
-            <constraints>
-              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <background color="-1712957"/>
-              <editable value="false"/>
-              <font name="Lucida Sans Unicode" size="10"/>
-            </properties>
-          </component>
-          <component id="6c941" class="javax.swing.JTextField" binding="textField3" default-binding="true">
             <constraints>
               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
             <properties>
-              <background color="-1712957"/>
+              <background color="-6114657"/>
               <editable value="false"/>
-              <font name="Lucida Sans Unicode" size="10"/>
+              <font name="Consolas" size="10"/>
             </properties>
           </component>
           <component id="b6747" class="javax.swing.JTextField" binding="textField4" default-binding="true">
-            <constraints>
-              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <background color="-1712957"/>
-              <editable value="false"/>
-              <font name="Lucida Sans Unicode" size="10"/>
-            </properties>
-          </component>
-          <component id="e765f" class="javax.swing.JTextField" binding="textField5" default-binding="true">
-            <constraints>
-              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <background color="-1712957"/>
-              <editable value="false"/>
-              <font name="Lucida Sans Unicode" size="10"/>
-            </properties>
-          </component>
-          <component id="b04a3" class="javax.swing.JTextField" binding="textField6" default-binding="true">
             <constraints>
               <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
             <properties>
-              <background color="-1712957"/>
+              <background color="-8812681"/>
               <editable value="false"/>
-              <font name="Lucida Sans Unicode" size="10"/>
+              <font name="Consolas" size="10" style="1"/>
+            </properties>
+          </component>
+          <component id="e765f" class="javax.swing.JTextField" binding="textField5" default-binding="true">
+            <constraints>
+              <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-13155273"/>
+              <editable value="false"/>
+              <font name="Consolas" size="10"/>
+              <foreground color="-1"/>
+            </properties>
+          </component>
+          <component id="b04a3" class="javax.swing.JTextField" binding="textField6" default-binding="true">
+            <constraints>
+              <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-13550031"/>
+              <editable value="false"/>
+              <font name="Consolas" size="10"/>
+              <foreground color="-1"/>
+            </properties>
+          </component>
+          <component id="6f575" class="javax.swing.JTextField" binding="textField8" default-binding="true">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-4798797"/>
+              <editable value="false"/>
+              <font name="Consolas" size="10"/>
+            </properties>
+          </component>
+          <component id="2e7d9" class="javax.swing.JTextField" binding="textField9" default-binding="true">
+            <constraints>
+              <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-13155273"/>
+              <editable value="false"/>
+              <font name="Consolas" size="10"/>
+              <foreground color="-1"/>
+            </properties>
+          </component>
+          <component id="33bf0" class="javax.swing.JTextField" binding="textField10" default-binding="true">
+            <constraints>
+              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-8812681"/>
+              <editable value="false"/>
+              <font name="Consolas" size="10" style="1"/>
+            </properties>
+          </component>
+          <component id="c886e" class="javax.swing.JTextField" binding="textField11" default-binding="true">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-6114657"/>
+              <editable value="false"/>
+              <font name="Consolas" size="10"/>
+            </properties>
+          </component>
+          <component id="6c941" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-8812681"/>
+              <editable value="false"/>
+              <font name="Consolas" size="10" style="1"/>
             </properties>
           </component>
         </children>
@@ -367,6 +391,26 @@
         </properties>
         <border type="none"/>
         <children>
+          <component id="98b9b" class="javax.swing.JComboBox" binding="comboBox3" default-binding="true">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-6646653"/>
+              <font name="Lucida Sans"/>
+              <foreground color="-16777216"/>
+              <model>
+                <item value="Cepat Saji"/>
+                <item value="----------"/>
+                <item value="Roti daging"/>
+              </model>
+            </properties>
+          </component>
+          <hspacer id="2c3f9">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
           <component id="e8307" class="javax.swing.JComboBox" binding="comboBox2">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
@@ -390,134 +434,177 @@
               </model>
             </properties>
           </component>
-          <component id="98b9b" class="javax.swing.JComboBox" binding="comboBox3" default-binding="true">
-            <constraints>
-              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-6646653"/>
-              <font name="Lucida Sans"/>
-              <foreground color="-16777216"/>
-              <model>
-                <item value="Cepat Saji"/>
-                <item value="----------"/>
-                <item value="Roti daging"/>
-              </model>
-            </properties>
-          </component>
-          <hspacer id="2c3f9">
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-          </hspacer>
         </children>
       </grid>
-      <grid id="ce871" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="62cfe" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <background color="-3686750"/>
-        </properties>
-        <border type="none"/>
-        <children>
-          <component id="7fb4a" class="javax.swing.JCheckBox" binding="asamCheckBox1" default-binding="true">
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-4810898"/>
-              <font name="Consolas"/>
-              <text value="Asam"/>
-            </properties>
-          </component>
-          <component id="a02c6" class="javax.swing.JTextField" binding="textField7" default-binding="true">
-            <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <background color="-3686750"/>
-              <editable value="false"/>
-              <font name="Lucida Sans Unicode" size="10"/>
-            </properties>
-          </component>
-          <component id="41098" class="javax.swing.JCheckBox" binding="manisCheckBox1" default-binding="true">
-            <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-4810898"/>
-              <font name="Consolas"/>
-              <text value="Manis"/>
-            </properties>
-          </component>
-          <component id="6e7b0" class="javax.swing.JTextField" binding="textField8" default-binding="true">
-            <constraints>
-              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="60" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <background color="-5397366"/>
-              <editable value="false"/>
-              <font name="Lucida Sans Unicode" size="10"/>
-            </properties>
-          </component>
-          <component id="a2458" class="javax.swing.JCheckBox" binding="pahitCheckBox1" default-binding="true">
-            <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-4810898"/>
-              <font name="Consolas"/>
-              <text value="Pahit"/>
-            </properties>
-          </component>
-          <component id="cde0e" class="javax.swing.JTextField" binding="textField9" default-binding="true">
-            <constraints>
-              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <background color="-6514811"/>
-              <editable value="false"/>
-              <font name="Lucida Sans Unicode" size="10"/>
-            </properties>
-          </component>
-        </children>
-      </grid>
-      <grid id="62cfe" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="0" left="0" bottom="0" right="0"/>
-        <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-6646653"/>
         </properties>
         <border type="none"/>
         <children>
-          <component id="58c27" class="javax.swing.JButton" binding="button1" default-binding="true">
+          <component id="b79e8" class="javax.swing.JTextField" binding="crKetuaTsaniAflahTextField" default-binding="true">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <editable value="false"/>
+              <enabled value="true"/>
+              <font name="Consolas" size="11"/>
+              <foreground color="-16777216"/>
+              <horizontalAlignment value="0"/>
+              <text value="Cr ketua : Tsani Aflah"/>
             </properties>
           </component>
-          <hspacer id="cc27d">
+          <hspacer id="f8ffb">
             <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
           </hspacer>
-          <vspacer id="13c21">
+          <hspacer id="71c0b">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
-          </vspacer>
+          </hspacer>
+        </children>
+      </grid>
+      <grid id="f1c97" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-4798797"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="7b287" class="javax.swing.JLabel" binding="Label">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial Black" size="28"/>
+              <foreground color="-8494264"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <text value="D A F T A R   M E N U"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="813c1" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="8" bottom="18" right="0"/>
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-265244"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="ed82c" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <enabled value="true"/>
+              <font name="Lucida Fax" size="24"/>
+              <foreground color="-8494264"/>
+              <text value="JELAJAH DUNIA"/>
+            </properties>
+          </component>
+          <component id="7e23c" class="javax.swing.JButton" binding="ASIANFOODButton" default-binding="true">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-8494264"/>
+              <foreground color="-1581378"/>
+              <text value="ASIAN FOOD"/>
+            </properties>
+          </component>
+          <component id="8f283" class="javax.swing.JButton" binding="WESTERNFOODButton" default-binding="true">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-8494264"/>
+              <foreground color="-1581378"/>
+              <text value="WESTERN FOOD"/>
+            </properties>
+          </component>
+          <grid id="dc19b" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-265244"/>
+              <foreground color="-265244"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </grid>
+          <grid id="da751" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-265244"/>
+              <foreground color="-265244"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <vspacer id="d3220">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <vspacer id="90bb6">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <vspacer id="43e3">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+            </children>
+          </grid>
+          <component id="46279" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-4810898"/>
+              <editable value="false"/>
+              <font name="Consolas" size="12" style="1"/>
+            </properties>
+          </component>
+          <component id="6750c" class="javax.swing.JButton" binding="resetButton" default-binding="true">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-265244"/>
+              <enabled value="true"/>
+              <font name="Consolas" size="10" style="1"/>
+              <foreground color="-6114657"/>
+              <hideActionText value="false"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <text value="Reset"/>
+            </properties>
+          </component>
         </children>
       </grid>
     </children>

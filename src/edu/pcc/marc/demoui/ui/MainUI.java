@@ -13,7 +13,6 @@ public class MainUI {
     private JTable showTable;
     private JButton episodeButton;
     private JTable showTable2;
-    private JComboBox comboBox1;
     private JCheckBox asamCheckBox;
     private JCheckBox asinCheckBox;
     private JCheckBox gurihCheckBox;
@@ -28,13 +27,16 @@ public class MainUI {
     private JTextField textField6;
     private JComboBox comboBox2;
     private JComboBox comboBox3;
-    private JCheckBox asamCheckBox1;
-    private JCheckBox pahitCheckBox1;
-    private JCheckBox manisCheckBox1;
-    private JTextField textField7;
-    private JTextField textField8;
     private JTextField textField9;
-    private JButton button1;
+    private JLabel Label;
+    private JTextField textField8;
+    private JTextField textField10;
+    private JTextField textField11;
+    private JTextField crKetuaTsaniAflahTextField;
+    private JButton ASIANFOODButton;
+    private JButton WESTERNFOODButton;
+    private JTextArea textArea1;
+    private JButton resetButton;
 
     //mengisi text field sesuai dengan check box yang di centang
     public MainUI(){
@@ -43,10 +45,12 @@ public class MainUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (asamCheckBox.isSelected()){
-                    textField1.setText("Spaghetti, nasi goreng atau roti daging");
+                    textField1.setText("MAKANAN : Spaghetti, nasi goreng, roti daging");
+                    textField8.setText("MINUMAN : Limoncello");
                     asamCheckBox.setSelected(true);
                 }else{
                     textField1.setText("");
+                    textField8.setText("");
                     asamCheckBox.setSelected(false);
                 }
             }
@@ -57,9 +61,11 @@ public class MainUI {
             public void actionPerformed(ActionEvent e) {
                 if (asinCheckBox.isSelected()){
                     textField2.setText("Naci goyeng");
+                    textField11.setText("Minuman asin tidak ditemukan");
                     asinCheckBox.setSelected(true);
                 }else{
                     textField2.setText("");
+                    textField11.setText("");
                     asinCheckBox.setSelected(false);
                 }
             }
@@ -69,7 +75,7 @@ public class MainUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (gurihCheckBox.isSelected()){
-                    textField3.setText("Nasi goreng, mie kwetiau, italian salad, lasagna, kimchi, rendang, dimsum, atau tortilla");
+                    textField3.setText("MAKANAN : Nasi goreng, mie kwetiau, italian salad, lasagna, kimchi, rendang, dimsum, tortilla");
                     gurihCheckBox.setSelected(true);
                 }else{
                     textField3.setText("");
@@ -82,10 +88,12 @@ public class MainUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (manisCheckBox.isSelected()){
-                    textField4.setText("Spaghetti, roti daging, atau lasagna");
+                    textField4.setText("MAKANAN : Spaghetti, roti daging, lasagna");
+                    textField10.setText("MINUMAN :Bubble tea, cafe mexicano,thai tea, cendol, lahang, bir pletok");
                     manisCheckBox.setSelected(true);
                 }else{
                     textField4.setText("");
+                    textField10.setText("");
                     manisCheckBox.setSelected(false);
                 }
             }
@@ -95,10 +103,12 @@ public class MainUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (pahitCheckBox.isSelected()){
-                    textField5.setText("Sayangnya belum ada 'pahit' didalam menu. Mungkin minuman?");
+                    textField5.setText("Makanan pahit tidak ditemukan");
+                    textField9.setText("MINUMAN : ocha, kopi sanger, espresso, coklat aztek");
                     pahitCheckBox.setSelected(true);
                 }else{
                     textField5.setText("");
+                    textField9.setText("");
                     pahitCheckBox.setSelected(false);
                 }
             }
@@ -108,7 +118,7 @@ public class MainUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (pedasCheckBox.isSelected()){
-                    textField6.setText("Mie kwetiau, lasagna, rendang, chili crab,atau tortilla");
+                    textField6.setText("MAKANAN : Mie kwetiau, lasagna, rendang, chili crab,atau tortilla");
                     pedasCheckBox.setSelected(true);
                 }else{
                     textField6.setText("");
@@ -117,48 +127,33 @@ public class MainUI {
             }
         });
 
-        asamCheckBox1.addActionListener(new ActionListener() {
+        //scroll pane belum siap
+
+        ASIANFOODButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (asamCheckBox1.isSelected()){
-                    textField7.setText("Limoncello");
-                    asamCheckBox1.setSelected(true);
-                }else{
-                    textField7.setText("");
-                    asamCheckBox1.setSelected(false);
-                }
+                textArea1.setText("MAKANAN : nasi goreng, roti daging,  " +
+                        "\nMie kwetiau, sushi, kimchi, rendang, dimsum" +
+                        " \n\nMINUMAN  : ocha, bubble tea, kopi sanger,  " +
+                        "\nthai tea, cendol, bajigur, lahang, bir pletok");
             }
         });
 
-        manisCheckBox1.addActionListener(new ActionListener() {
+        WESTERNFOODButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (manisCheckBox1.isSelected()){
-                    textField8.setText("Bubble tea, cafe mexicano,thai tea, cendol, lahang, bir pletok ");
-                    manisCheckBox1.setSelected(true);
-                }else{
-                    textField8.setText("");
-                    manisCheckBox1.setSelected(false);
-                }
+                textArea1.setText("MAKANAN : spaghetti, italian salad, lasagna, " +
+                        "\nchili crab, tortila" +
+                        " \n\nMINUMAN  : Café mexicano, Limoncello, " +
+                        "\nEspresso, Coklat aztek");
             }
         });
-
-
-        pahitCheckBox1.addActionListener(new ActionListener() {
+        resetButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (pahitCheckBox1.isSelected()){
-                    textField9.setText("Sayangnya belum ada 'pahit' didalam menu. Mungkin minuman?");
-                    pahitCheckBox1.setSelected(true);
-                }else{
-                    textField9.setText("");
-                    pahitCheckBox1.setSelected(false);
-                }
+                textArea1.setText("");
             }
         });
-
-        //tag negara belum selesai
-
     }
 
     public JPanel getRootPanel() {
@@ -199,12 +194,11 @@ public class MainUI {
                 {"Kopi sanger", "10.000", "S", "Panas", "Coffein", "Pahit", "Indonesia"},
                 {"Thai tea", "15.000", "M", "Dingin", "Coffein", "Manis", "Thailand"},
                 {"Espresso", "12.000", "S", "Panas", "Coffein", "Pahit", "Amerika"},
-                {"Mazagran", "10.000", "M", "Dingin", "Coffein", "Pahit", "Algeria"},
+                {"Coklat aztek", "10.000", "M", "Dingin", "Non-Coffein", "Pahit", "Spanyol"},
                 {"Cendol", "12.000", "L", "Dingin", "Non-coffein", "Manis", "Indonesia"},
                 {"Bajigur", "8.000", "M", "Panas", "Non-coffein", "Manis", "Indonesia"},
                 {"Lahang", "8.000", "M", "Panas", "Non-coffein", "Manis", "Indonesia"},
                 {"Bir pletok", "10.000", "L", "Panas", "Non-coffein", "Manis", "Indonesia"}
-
         };
 
         //nama-nama kolom dari tabel tersebut
