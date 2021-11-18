@@ -37,6 +37,34 @@ public class MainUI {
     private JButton WESTERNFOODButton;
     private JTextArea textArea1;
     private JButton resetButton;
+    private JTextField textField7;
+    private JTextField textField14;
+    private JRadioButton asamRadioButton;
+    private JRadioButton asinRadioButton;
+    private JRadioButton gurihRadioButton;
+    private JRadioButton manisRadioButton;
+    private JRadioButton pahitRadioButton;
+    private JRadioButton pedasRadioButton;
+    private JRadioButton vegetarianRadioButton;
+    private JRadioButton nRadioButton;
+    private JRadioButton nonVegetarianRadioButton;
+    private JRadioButton sehatRadioButton;
+    private JRadioButton cepatSajiRadioButton;
+    private JTextField textField12;
+    private JTextField minumanTextField;
+    private JRadioButton asinRadioButton1;
+    private JRadioButton manisRadioButton1;
+    private JRadioButton pahitRadioButton1;
+    private JRadioButton mRadioButton;
+    private JRadioButton sRadioButton;
+    private JRadioButton lRadioButton;
+    private JRadioButton netralRadioButton;
+    private JRadioButton dinginRadioButton;
+    private JRadioButton panasRadioButton;
+    private JRadioButton kofeinRadioButton;
+    private JRadioButton nonKofeinRadioButton;
+    private JTextField textField13;
+    private JTextField makananTextField;
 
     //mengisi text field sesuai dengan check box yang di centang
     public MainUI(){
@@ -154,6 +182,12 @@ public class MainUI {
                 textArea1.setText("");
             }
         });
+        episodeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textField7.setText("Loading...");
+            }
+        });
     }
 
     public JPanel getRootPanel() {
@@ -215,7 +249,8 @@ public class MainUI {
         //menentukan besar satu kolom dalam tabel
         TableColumnModel coloumns = showTable.getColumnModel();
         coloumns.getColumn(3).setMinWidth(180);
-        coloumns.getColumn(2).setMinWidth(125);
+        coloumns.getColumn(2).setMinWidth(105);
+        coloumns.getColumn(1).setMinWidth(50);
         coloumns.getColumn(0).setMinWidth(143);
 
 
