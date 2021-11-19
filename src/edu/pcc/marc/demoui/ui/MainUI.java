@@ -65,6 +65,8 @@ public class MainUI {
     private JRadioButton nonKofeinRadioButton;
     private JTextField textField13;
     private JTextField makananTextField;
+    private JButton EXITButton;
+    private JFormattedTextField EXITFormattedTextField;
 
     //mengisi text field sesuai dengan check box yang di centang
     public MainUI(){
@@ -155,8 +157,6 @@ public class MainUI {
             }
         });
 
-        //scroll pane belum siap
-
         ASIANFOODButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -176,19 +176,271 @@ public class MainUI {
                         "\nEspresso, Coklat aztek");
             }
         });
+
         resetButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 textArea1.setText("");
             }
         });
+
+        //method di program rekomendasi
+
         episodeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 textField7.setText("Loading...");
             }
         });
+
+        textField14.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Double uang; // nominal uang
+                uang = Double.parseDouble(textField14.getText());
+                if (uang < 0){
+                    textField14.setEditable(false);
+                }else{
+                    textField14.setEditable(true);
+                }
+            }
+        });
+
+
+
+        //membuat tombol  selain yang dipilih tidak dapat dipilih
+
+        asamRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (asamRadioButton.isSelected()){
+                    asinRadioButton.setSelected(false);
+                    gurihRadioButton.setSelected(false);
+                    manisRadioButton.setSelected(false);
+                    pahitRadioButton.setSelected(false);
+                    pedasRadioButton.setSelected(false);
+                }
+            }
+        });
+
+        asinRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (asinRadioButton.isSelected()){
+                    asamRadioButton.setSelected(false);
+                    gurihRadioButton.setSelected(false);
+                    manisRadioButton.setSelected(false);
+                    pahitRadioButton.setSelected(false);
+                    pedasRadioButton.setSelected(false);
+                }
+            }
+        });
+
+        gurihRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (gurihRadioButton.isSelected()){
+                    asamRadioButton.setSelected(false);
+                    asinRadioButton.setSelected(false);
+                    manisRadioButton.setSelected(false);
+                    pahitRadioButton.setSelected(false);
+                    pedasRadioButton.setSelected(false);
+                }
+            }
+        });
+
+        manisRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (manisRadioButton.isSelected()){
+                    asamRadioButton.setSelected(false);
+                    asinRadioButton.setSelected(false);
+                    gurihRadioButton.setSelected(false);
+                    pahitRadioButton.setSelected(false);
+                    pedasRadioButton.setSelected(false);
+                }
+            }
+        });
+
+        pahitRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (pahitRadioButton.isSelected()){
+                    asamRadioButton.setSelected(false);
+                    asinRadioButton.setSelected(false);
+                    gurihRadioButton.setSelected(false);
+                    manisRadioButton.setSelected(false);
+                    pedasRadioButton.setSelected(false);
+                }
+            }
+        });
+
+        pedasRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (pedasRadioButton.isSelected()){
+                    asamRadioButton.setSelected(false);
+                    asinRadioButton.setSelected(false);
+                    gurihRadioButton.setSelected(false);
+                    manisRadioButton.setSelected(false);
+                    pahitRadioButton.setSelected(false);
+                }
+            }
+        });
+
+        vegetarianRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (vegetarianRadioButton.isSelected()){
+                    nonVegetarianRadioButton.setSelected(false);
+                }
+            }
+        });
+
+        nonVegetarianRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (nonVegetarianRadioButton.isSelected()){
+                    vegetarianRadioButton.setSelected(false);
+                }
+            }
+        });
+
+        sehatRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (sehatRadioButton.isSelected()){
+                    cepatSajiRadioButton.setSelected(false);
+                }
+            }
+        });
+
+        cepatSajiRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (cepatSajiRadioButton.isSelected()){
+                    sehatRadioButton.setSelected(false);
+                }
+            }
+        });
+
+        //bagian minuman
+        asinRadioButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (asinRadioButton1.isSelected()){
+                    manisRadioButton1.setSelected(false);
+                    pahitRadioButton1.setSelected(false);
+                }
+            }
+        });
+
+        manisRadioButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (manisRadioButton1.isSelected()){
+                    asinRadioButton1.setSelected(false);
+                    pahitRadioButton1.setSelected(false);
+                }
+            }
+        });
+
+        pahitRadioButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (pahitRadioButton1.isSelected()){
+                    asinRadioButton1.setSelected(false);
+                    manisRadioButton1.setSelected(false);
+                }
+            }
+        });
+
+        mRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (mRadioButton.isSelected()){
+                    sRadioButton.setSelected(false);
+                    lRadioButton.setSelected(false);
+                }
+            }
+        });
+
+        sRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (sRadioButton.isSelected()){
+                    mRadioButton.setSelected(false);
+                    lRadioButton.setSelected(false);
+                }
+            }
+        });
+
+        lRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (lRadioButton.isSelected()){
+                    mRadioButton.setSelected(false);
+                    sRadioButton.setSelected(false);
+                }
+            }
+        });
+
+        netralRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (netralRadioButton.isSelected()){
+                    dinginRadioButton.setSelected(false);
+                    panasRadioButton.setSelected(false);
+                }
+            }
+        });
+
+        dinginRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (dinginRadioButton.isSelected()){
+                    netralRadioButton.setSelected(false);
+                    panasRadioButton.setSelected(false);
+                }
+            }
+        });
+
+        panasRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (panasRadioButton.isSelected()){
+                    dinginRadioButton.setSelected(false);
+                    netralRadioButton.setSelected(false);
+                }
+            }
+        });
+
+        kofeinRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (kofeinRadioButton.isSelected()){
+                    nonKofeinRadioButton.setSelected(false);
+                }
+            }
+        });
+        nonKofeinRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (nonKofeinRadioButton.isSelected()){
+                    kofeinRadioButton.setSelected(false);
+                }
+            }
+        });
+
+        EXITButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
     }
+
+    //sistem rekomendasi belum siap
 
     public JPanel getRootPanel() {
         return rootPanel;
@@ -243,12 +495,12 @@ public class MainUI {
 
         showTable2.setModel(new DefaultTableModel(
                 data1,
-                new String[]{"Minuman", "Harga(IDR)", "Ukuran", "kondisi", "Jenis", "Tag", "Asal"}
+                new String[]{"Minuman", "Harga(IDR)", "Ukuran", "Kondisi", "Jenis", "Tag", "Asal"}
         ));
 
         //menentukan besar satu kolom dalam tabel
         TableColumnModel coloumns = showTable.getColumnModel();
-        coloumns.getColumn(3).setMinWidth(180);
+        coloumns.getColumn(3).setMinWidth(169);
         coloumns.getColumn(2).setMinWidth(105);
         coloumns.getColumn(1).setMinWidth(50);
         coloumns.getColumn(0).setMinWidth(143);
@@ -256,6 +508,8 @@ public class MainUI {
 
         TableColumnModel coloumns1 = showTable2.getColumnModel();
         coloumns1.getColumn(0).setMinWidth(142);
+        coloumns1.getColumn(2).setMinWidth(2);
+        coloumns1.getColumn(4).setMinWidth(100);
 
         //membuat align center
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
