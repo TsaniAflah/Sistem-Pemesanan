@@ -716,24 +716,24 @@
               <text value="SUHU"/>
             </properties>
           </component>
-          <component id="56dee" class="javax.swing.JRadioButton" binding="netralRadioButton" default-binding="true">
+          <component id="56dee" class="javax.swing.JRadioButton" binding="dinginRadioButton">
             <constraints>
               <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="Leelawadee"/>
               <horizontalAlignment value="0"/>
-              <text value="netral"/>
+              <text value="dingin"/>
             </properties>
           </component>
-          <component id="8b1b3" class="javax.swing.JRadioButton" binding="dinginRadioButton" default-binding="true">
+          <component id="8b1b3" class="javax.swing.JRadioButton" binding="panasRadioButton">
             <constraints>
               <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="Leelawadee"/>
               <horizontalAlignment value="0"/>
-              <text value="dingin"/>
+              <text value="panas"/>
             </properties>
           </component>
           <component id="d3b80" class="javax.swing.JLabel">
@@ -753,7 +753,7 @@
             <properties>
               <font name="Leelawadee"/>
               <horizontalAlignment value="0"/>
-              <text value="kofein"/>
+              <text value="Non-kofein"/>
             </properties>
           </component>
           <component id="f655" class="javax.swing.JRadioButton" binding="nonKofeinRadioButton" default-binding="true">
@@ -763,7 +763,7 @@
             <properties>
               <font name="Leelawadee"/>
               <horizontalAlignment value="0"/>
-              <text value="non-kofein"/>
+              <text value="Kofein"/>
             </properties>
           </component>
           <component id="87859" class="javax.swing.JLabel">
@@ -776,34 +776,35 @@
               <text value="ASAL"/>
             </properties>
           </component>
-          <component id="6c045" class="javax.swing.JTextField" binding="textField13" default-binding="true">
-            <constraints>
-              <grid row="9" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <background color="-10267842"/>
-            </properties>
-          </component>
-          <component id="bfe39" class="javax.swing.JRadioButton" binding="panasRadioButton" default-binding="true">
-            <constraints>
-              <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <font name="Leelawadee"/>
-              <horizontalAlignment value="0"/>
-              <text value="panas"/>
-            </properties>
-          </component>
-          <component id="c49b0" class="javax.swing.JButton" binding="simpanButton1" default-binding="true">
+          <component id="c49b0" class="javax.swing.JButton" binding="simpanButton1">
             <constraints>
               <grid row="9" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-10267842"/>
               <foreground color="-5593966"/>
-              <text value="Simpan"/>
+              <text value="Cari"/>
+            </properties>
+          </component>
+          <component id="eca09" class="javax.swing.JComboBox" binding="asalMinuman">
+            <constraints>
+              <grid row="9" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-10267842"/>
+              <font name="Leelawadee"/>
+              <foreground color="-5593966"/>
+              <model>
+                <item value="--Pilih--"/>
+                <item value="Italia"/>
+                <item value="Indonesia"/>
+                <item value="Jepang"/>
+                <item value="Spanyol"/>
+                <item value="Taiwan"/>
+                <item value="Mexico"/>
+                <item value="America"/>
+                <item value="Thailand"/>
+              </model>
             </properties>
           </component>
         </children>
@@ -1006,7 +1007,7 @@
             <properties>
               <background color="-10267842"/>
               <foreground color="-3686750"/>
-              <text value="Simpan"/>
+              <text value="Cari"/>
             </properties>
           </component>
           <component id="beb3c" class="javax.swing.JComboBox" binding="asalMakanan">
@@ -1014,6 +1015,9 @@
               <grid row="8" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-10267842"/>
+              <font name="Leelawadee"/>
+              <foreground color="-3686750"/>
               <model>
                 <item value="--Pilih--"/>
                 <item value="Italia"/>
@@ -1065,16 +1069,6 @@
               <foreground color="-1"/>
             </properties>
           </component>
-          <vspacer id="c99a6">
-            <constraints>
-              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-            </constraints>
-          </vspacer>
-          <vspacer id="f3d0e">
-            <constraints>
-              <grid row="0" column="1" row-span="1" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-            </constraints>
-          </vspacer>
           <component id="63a1d" class="javax.swing.JLabel">
             <constraints>
               <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -1114,6 +1108,17 @@
               <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
           </hspacer>
+          <component id="f85f5" class="javax.swing.JButton" binding="RESETButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-10267842"/>
+              <font name="Consolas" size="14" style="1"/>
+              <foreground color="-463389"/>
+              <text value="RESET"/>
+            </properties>
+          </component>
         </children>
       </grid>
     </children>

@@ -51,7 +51,6 @@ public class MainUI {
     private JRadioButton pahitRadioButton;
     private JRadioButton pedasRadioButton;
     private JRadioButton vegetarianRadioButton;
-    private JRadioButton nRadioButton;
     private JRadioButton nonVegetarianRadioButton;
     private JRadioButton sehatRadioButton;
     private JRadioButton cepatSajiRadioButton;
@@ -67,18 +66,22 @@ public class MainUI {
     private JRadioButton panasRadioButton;
     private JRadioButton kofeinRadioButton;
     private JRadioButton nonKofeinRadioButton;
-    private JTextField textField13;
     private JTextField makananTextField;
     private JButton EXITButton;
     private JButton simpanButton;
     private JButton simpanButton1;
     private JComboBox asalMakanan;
+    private JComboBox asalMinuman;
+    private JButton RESETButton;
     private JFormattedTextField EXITFormattedTextField;
     public ArrayList<String> pilihanUser = new ArrayList<>();
+    public ArrayList<String> pilihanuserMinuman =new ArrayList<>();
 
     //ArrayList<String> spaghetti = new ArrayList<>(Arrays.asList("a","d","f","i"));
     Object [][] dataMakanan;
     Object [][] dataMinuman;
+
+    //mengisi setiap kolom dalam tabel
 
     private void createTable(){
         Object[][] data = {
@@ -101,7 +104,7 @@ public class MainUI {
                 {"Ocha", "10.000", "M", "Dingin", "Non-coffein", "Pahit", "Jepang"},
                 {"Bubble tea", "13.000", "M", "Dingin", "Non-coffein", "Manis" ,"Taiwan"},
                 {"Café mexicano", "8.000", "M", "Panas", "Coffein", "Manis", "Mexico"},
-                {"Limoncello", "8.000", "L", "Netral", "Non-coffein",  "Asam", "Italia"},
+                {"Limoncello", "8.000", "L", "Dingin", "Non-coffein",  "Manis", "Italia"},
                 {"Kopi sanger", "10.000", "S", "Panas", "Coffein", "Pahit", "Indonesia"},
                 {"Thai tea", "15.000", "M", "Dingin", "Coffein", "Manis", "Thailand"},
                 {"Espresso", "12.000", "S", "Panas", "Coffein", "Pahit", "Amerika"},
@@ -275,7 +278,7 @@ public class MainUI {
         episodeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                textField7.setText("Loading...");
+                textField7.setText("Halo! mesin siap digunakan...");
             }
         });
 
@@ -291,7 +294,6 @@ public class MainUI {
                 }
             }
         });
-
 
 
         //membuat tombol  selain yang dipilih tidak dapat dipilih
@@ -471,6 +473,7 @@ public class MainUI {
             }
         });
 
+        /**
         netralRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -479,13 +482,13 @@ public class MainUI {
                     panasRadioButton.setSelected(false);
                 }
             }
-        });
+        });**/
 
         dinginRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (dinginRadioButton.isSelected()){
-                    netralRadioButton.setSelected(false);
+                   // netralRadioButton.setSelected(false);
                     panasRadioButton.setSelected(false);
                 }
             }
@@ -496,7 +499,7 @@ public class MainUI {
             public void actionPerformed(ActionEvent e) {
                 if (panasRadioButton.isSelected()){
                     dinginRadioButton.setSelected(false);
-                    netralRadioButton.setSelected(false);
+                   // netralRadioButton.setSelected(false);
                 }
             }
         });
@@ -532,32 +535,11 @@ public class MainUI {
             }
         });
 
-
         simpanButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                /**
-                if (asamRadioButton.isSelected()){
-                    pilihanUser.add("a");
-                }else if(asinRadioButton.isSelected()){
-                    pilihanUser.add("b");
-                }else if(gurihRadioButton.isSelected()) {
-                    pilihanUser.add("c");
-                }else if(manisRadioButton.isSelected()) {
-                    pilihanUser.add("d");
-                }else if(pahitRadioButton.isSelected()) {
-                    pilihanUser.add("e");
-                }else if(pedasRadioButton.isSelected()) {
-                    pilihanUser.add("f");
-                }else if(vegetarianRadioButton.isSelected()){
-                    pilihanUser.add("g");
-                }else if(nonVegetarianRadioButton.isSelected()){
-                    pilihanUser.add("h");
-                }else if(sehatRadioButton.isSelected()){
-                    pilihanUser.add("i");
-                }else if(cepatSajiRadioButton.isSelected()){
-                    pilihanUser.add("j");
-                }**/
+
+                //mesin rekomendasi makanan
 
                 if(vegetarianRadioButton.isSelected()){
                     if(sehatRadioButton.isSelected()){
@@ -617,11 +599,15 @@ public class MainUI {
                             }if (asalMakanan.getSelectedItem().equals("Australia")||asalMakanan.getSelectedItem().equals("--Pilih--")){
                                 pilihanUser.add("Chili crab");
                             }
-                    }else if(cepatSajiRadioButton.isSelected()){
-                        if(asamRadioButton.isSelected()){
+                        }
+                    }else if (cepatSajiRadioButton.isSelected()){
+                        if (manisRadioButton.isSelected()){
                             if (asalMakanan.getSelectedItem().equals("China")||asalMakanan.getSelectedItem().equals("--Pilih--")){
                                 pilihanUser.add("Roti daging");
-                                }
+                            }
+                        }else if (asamRadioButton.isSelected()){
+                            if (asalMakanan.getSelectedItem().equals("China")||asalMakanan.getSelectedItem().equals("--Pilih--")){
+                                pilihanUser.add("Roti daging");
                             }
                         }
                     }
@@ -656,41 +642,144 @@ public class MainUI {
             }
         });
 
+        //mesin rekomendasi minuman
 
-        /**
-        //minuman
+
         simpanButton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (asinRadioButton1.isSelected()){
-                    pilihanUser.add("a");
-                }else if(manisRadioButton1.isSelected()){
-                    pilihanUser.add("b");
-                }else if(pahitRadioButton1.isSelected()) {
-                    pilihanUser.add("c");
-                }else if(mRadioButton.isSelected()) {
-                    pilihanUser.add("d");
-                }else if(sRadioButton.isSelected()) {
-                    pilihanUser.add("e");
-                }else if(lRadioButton.isSelected()) {
-                    pilihanUser.add("f");
-                }else if(netralRadioButton.isSelected()){
-                    pilihanUser.add("g");
-                }else if(dinginRadioButton.isSelected()){
-                    pilihanUser.add("h");
-                }else if(panasRadioButton.isSelected()){
-                    pilihanUser.add("i");
-                }else if(kofeinRadioButton.isSelected()){
-                    pilihanUser.add("j");
-                }else if(nonKofeinRadioButton.isSelected()){
-                    pilihanUser.add("k");
+                if (nonKofeinRadioButton.isSelected()){
+                    if (dinginRadioButton.isSelected()){
+                        if (mRadioButton.isSelected()){
+                            if (pahitRadioButton1.isSelected()){
+                                if (asalMinuman.getSelectedItem().equals("Jepang")||asalMinuman.getSelectedItem().equals("--Pilih--")){
+                                    pilihanuserMinuman.add("Ocha");
+                                }if (asalMinuman.getSelectedItem().equals("Spanyol")||asalMinuman.getSelectedItem().equals("--Pilih--")){
+                                    pilihanuserMinuman.add("Coklat aztek");
+                                }
+                            }else if (manisRadioButton1.isSelected()) {
+                                if (asalMinuman.getSelectedItem().equals("Taiwan") || asalMinuman.getSelectedItem().equals("--Pilih--")) {
+                                    pilihanuserMinuman.add("Bubble tea");
+                                }
+                            }
+                        }else if (lRadioButton.isSelected()){
+                            if (manisRadioButton1.isSelected()){
+                                if (asalMinuman.getSelectedItem().equals("Indonesia")||asalMinuman.getSelectedItem().equals("--Pilih--")){
+                                    pilihanuserMinuman.add("Cendol");
+                                }if (asalMinuman.getSelectedItem().equals("Italia")||asalMinuman.getSelectedItem().equals("--Pilih--")){
+                                    pilihanuserMinuman.add("Limoncello");
+                                }
+                            }
+                        }
+                    }else if (panasRadioButton.isSelected()){
+                        if (mRadioButton.isSelected()){
+                            if (manisRadioButton1.isSelected()){
+                                if (asalMinuman.getSelectedItem().equals("Indonesia")||asalMinuman.getSelectedItem().equals("--Pilih--")){
+                                    pilihanuserMinuman.add("Bajigur");
+                                    pilihanuserMinuman.add("Lahang");
+                                }
+                            }
+                        }else if (lRadioButton.isSelected()){
+                            if (manisRadioButton1.isSelected()){
+                                if (asalMinuman.getSelectedItem().equals("Indonesia")||asalMinuman.getSelectedItem().equals("--Pilih--")){
+                                    pilihanuserMinuman.add("Bir pletok");
+                                }
+                            }
+                        }
+                    }
+                }else if (kofeinRadioButton.isSelected()){
+                    if(panasRadioButton.isSelected()){
+                        if (sRadioButton.isSelected()){
+                            if (pahitRadioButton1.isSelected()){
+                                if (asalMinuman.getSelectedItem().equals("Indonesia")||asalMinuman.getSelectedItem().equals("--Pilih--")){
+                                    pilihanuserMinuman.add("Kopi sanger");
+                                }if (asalMinuman.getSelectedItem().equals("Amerika")||asalMinuman.getSelectedItem().equals("--Pilih--")){
+                                    pilihanuserMinuman.add("Espresso");
+                                }
+                            }
+                        }else if (mRadioButton.isSelected()){
+                            if(manisRadioButton1.isSelected()){
+                                if (asalMinuman.getSelectedItem().equals("Mexico")||asalMinuman.getSelectedItem().equals("--Pilih--")){
+                                    pilihanuserMinuman.add("Cafe mexicano");
+                                }
+                            }
+                        }
+                    }else if (dinginRadioButton.isSelected()){
+                        if (mRadioButton.isSelected()){
+                            if (manisRadioButton1.isSelected()){
+                                if (asalMinuman.getSelectedItem().equals("Thailand")||asalMinuman.getSelectedItem().equals("--Pilih--")){
+                                    pilihanuserMinuman.add("Thai tea");
+                                }
+                            }
+                        }
+                    }
                 }
+                Set<String>setPilihanUserMinuman = new HashSet<>(pilihanuserMinuman);
+                pilihanuserMinuman = new ArrayList<>(setPilihanUserMinuman);
+                ArrayList<Integer>hargaMinuman = new ArrayList<>(setPilihanUserMinuman.size());
+                for (int i = 0; i < setPilihanUserMinuman.size(); i++) {
+                    for (int j = 0; j < dataMinuman.length; j++) {
+                        if (pilihanuserMinuman.get(i).equalsIgnoreCase(dataMinuman[j][1].toString())){
+                            hargaMinuman.add(i, Integer.parseInt(dataMinuman[j][1].toString()));
+                        }
+                    }
+                }
+                int budgetUser = Integer.parseInt(textField14.getText());
+                for (int i = 0; i < hargaMinuman.size(); i++) {
+                    if (hargaMinuman.get(i) > budgetUser){
+                        hargaMinuman.remove(i);
+                        pilihanuserMinuman.remove(i);
+                    }
+                }
+                String textHasils ="";
+                for (int i = 0; i < pilihanuserMinuman.size(); i++) {
+                    if (i==pilihanuserMinuman.size()-1){
+                        textHasils+=pilihanuserMinuman.get(i);
+                        break;
+                    }
+                    textHasils+=pilihanuserMinuman.get(i);
+                }
+                textField7.setText(textHasils);
+                rootPanel.repaint();
             }
-        });**/
+        });
+
+        //mereset layar setelah rekomendasi ditampilkan
+
+        RESETButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MainUI.main(new String[] {});
+                /**
+                textField7.setText("");
+                asamRadioButton.setSelected(false);
+                asinRadioButton.setSelected(false);
+                gurihRadioButton.setSelected(false);
+                pahitRadioButton.setSelected(false);
+                pedasRadioButton.setSelected(false);
+                manisRadioButton.setSelected(false);
+                nonVegetarianRadioButton.setSelected(false);
+                vegetarianRadioButton.setSelected(false);
+                cepatSajiRadioButton.setSelected(false);
+                sehatRadioButton.setSelected(false);
+                asalMakanan.setSelectedIndex(0);
+                pahitRadioButton1.setSelected(false);
+                manisRadioButton1.setSelected(false);
+                asinRadioButton1.setSelected(false);
+                pahitRadioButton1.setSelected(false);
+                nonKofeinRadioButton.setSelected(false);
+                kofeinRadioButton.setSelected(false);
+                dinginRadioButton.setSelected(false);
+                panasRadioButton.setSelected(false);
+                mRadioButton.setSelected(false);
+                lRadioButton.setSelected(false);
+                sRadioButton.setSelected(false);
+                asalMinuman.setSelectedIndex(0);
+                textField7.setText("");
+                 **/
+            }
+        });
     }
-
-
-    //sistem rekomendasi belum siap
 
 
     //String[]question
@@ -709,6 +798,6 @@ public class MainUI {
     }
 
 
-    //mengisi setiap kolom dalam tabel
+
 
 }
