@@ -27,7 +27,10 @@ public class MainUI {
     private JTextField textField4;
     private JTextField textField5;
     private JTextField textField6;
+    private JComboBox comboBox2;
+    private JComboBox comboBox3;
     private JTextField textField9;
+    private JLabel Label;
     private JTextField textField8;
     private JTextField textField10;
     private JTextField textField11;
@@ -55,6 +58,7 @@ public class MainUI {
     private JRadioButton mRadioButton;
     private JRadioButton sRadioButton;
     private JRadioButton lRadioButton;
+    private JRadioButton netralRadioButton;
     private JRadioButton dinginRadioButton;
     private JRadioButton panasRadioButton;
     private JRadioButton kofeinRadioButton;
@@ -109,6 +113,7 @@ public class MainUI {
         dataMinuman=data1;
 
         //nama-nama kolom dari tabel tersebut
+
         showTable.setModel(new DefaultTableModel(
                 data,
                 new String[]{"Makanan", "Harga(IDR)", "Jenis", "Tag", "Asal"}
@@ -120,6 +125,7 @@ public class MainUI {
         ));
 
         //menentukan besar satu kolom dalam tabel
+
         TableColumnModel coloumns = showTable.getColumnModel();
         coloumns.getColumn(3).setMinWidth(169);
         coloumns.getColumn(2).setMinWidth(105);
@@ -171,7 +177,7 @@ public class MainUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (asinCheckBox.isSelected()){
-                    textField2.setText("Nasi goreng");
+                    textField2.setText("Naci goyeng");
                     textField11.setText("Minuman asin tidak ditemukan");
                     asinCheckBox.setSelected(true);
                 }else{
@@ -265,7 +271,7 @@ public class MainUI {
             }
         });
 
-        //method di program rekomendasi
+        //program rekomendasi
 
         episodeButton.addActionListener(new ActionListener() {
             @Override
@@ -464,7 +470,6 @@ public class MainUI {
                 }
             }
         });
-
 
         dinginRadioButton.addActionListener(new ActionListener() {
             @Override
@@ -711,7 +716,6 @@ public class MainUI {
                         pilihanuserMinuman.remove(i);
                     }
                 }
-
                 String textHasil ="";
                 for (int i = 0; i < pilihanuserMinuman.size(); i++) {
                     if (i==pilihanuserMinuman.size()-1){
