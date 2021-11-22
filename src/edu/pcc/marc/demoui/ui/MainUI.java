@@ -4,12 +4,9 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemListener;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -30,10 +27,7 @@ public class MainUI {
     private JTextField textField4;
     private JTextField textField5;
     private JTextField textField6;
-    private JComboBox comboBox2;
-    private JComboBox comboBox3;
     private JTextField textField9;
-    private JLabel Label;
     private JTextField textField8;
     private JTextField textField10;
     private JTextField textField11;
@@ -61,7 +55,6 @@ public class MainUI {
     private JRadioButton mRadioButton;
     private JRadioButton sRadioButton;
     private JRadioButton lRadioButton;
-    private JRadioButton netralRadioButton;
     private JRadioButton dinginRadioButton;
     private JRadioButton panasRadioButton;
     private JRadioButton kofeinRadioButton;
@@ -77,7 +70,6 @@ public class MainUI {
     public ArrayList<String> pilihanUser = new ArrayList<>();
     public ArrayList<String> pilihanuserMinuman =new ArrayList<>();
 
-    //ArrayList<String> spaghetti = new ArrayList<>(Arrays.asList("a","d","f","i"));
     Object [][] dataMakanan;
     Object [][] dataMinuman;
 
@@ -179,7 +171,7 @@ public class MainUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (asinCheckBox.isSelected()){
-                    textField2.setText("Naci goyeng");
+                    textField2.setText("Nasi goreng");
                     textField11.setText("Minuman asin tidak ditemukan");
                     asinCheckBox.setSelected(true);
                 }else{
@@ -473,22 +465,11 @@ public class MainUI {
             }
         });
 
-        /**
-        netralRadioButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (netralRadioButton.isSelected()){
-                    dinginRadioButton.setSelected(false);
-                    panasRadioButton.setSelected(false);
-                }
-            }
-        });**/
 
         dinginRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (dinginRadioButton.isSelected()){
-                   // netralRadioButton.setSelected(false);
                     panasRadioButton.setSelected(false);
                 }
             }
@@ -499,7 +480,6 @@ public class MainUI {
             public void actionPerformed(ActionEvent e) {
                 if (panasRadioButton.isSelected()){
                     dinginRadioButton.setSelected(false);
-                   // netralRadioButton.setSelected(false);
                 }
             }
         });
@@ -644,11 +624,11 @@ public class MainUI {
 
         //mesin rekomendasi minuman
 
-
         simpanButton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (nonKofeinRadioButton.isSelected()){
+                    //textField7.setText("yes");
                     if (dinginRadioButton.isSelected()){
                         if (mRadioButton.isSelected()){
                             if (pahitRadioButton1.isSelected()){
@@ -731,16 +711,16 @@ public class MainUI {
                         pilihanuserMinuman.remove(i);
                     }
                 }
-                String textHasils ="";
+
+                String textHasil ="";
                 for (int i = 0; i < pilihanuserMinuman.size(); i++) {
                     if (i==pilihanuserMinuman.size()-1){
-                        textHasils+=pilihanuserMinuman.get(i);
+                        textHasil+=pilihanuserMinuman.get(i);
                         break;
                     }
-                    textHasils+=pilihanuserMinuman.get(i);
+                    textHasil+=pilihanuserMinuman.get(i)+", ";
                 }
-                textField7.setText(textHasils);
-                rootPanel.repaint();
+                textField7.setText(textHasil);
             }
         });
 
@@ -750,39 +730,9 @@ public class MainUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 MainUI.main(new String[] {});
-                /**
-                textField7.setText("");
-                asamRadioButton.setSelected(false);
-                asinRadioButton.setSelected(false);
-                gurihRadioButton.setSelected(false);
-                pahitRadioButton.setSelected(false);
-                pedasRadioButton.setSelected(false);
-                manisRadioButton.setSelected(false);
-                nonVegetarianRadioButton.setSelected(false);
-                vegetarianRadioButton.setSelected(false);
-                cepatSajiRadioButton.setSelected(false);
-                sehatRadioButton.setSelected(false);
-                asalMakanan.setSelectedIndex(0);
-                pahitRadioButton1.setSelected(false);
-                manisRadioButton1.setSelected(false);
-                asinRadioButton1.setSelected(false);
-                pahitRadioButton1.setSelected(false);
-                nonKofeinRadioButton.setSelected(false);
-                kofeinRadioButton.setSelected(false);
-                dinginRadioButton.setSelected(false);
-                panasRadioButton.setSelected(false);
-                mRadioButton.setSelected(false);
-                lRadioButton.setSelected(false);
-                sRadioButton.setSelected(false);
-                asalMinuman.setSelectedIndex(0);
-                textField7.setText("");
-                 **/
             }
         });
     }
-
-
-    //String[]question
 
     public JPanel getRootPanel() {
         return rootPanel;
@@ -796,8 +746,4 @@ public class MainUI {
         frame.pack();
         frame.setVisible(true);
     }
-
-
-
-
 }

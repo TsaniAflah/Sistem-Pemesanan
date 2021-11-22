@@ -746,7 +746,7 @@
               <text value="JENIS"/>
             </properties>
           </component>
-          <component id="a13ba" class="javax.swing.JRadioButton" binding="kofeinRadioButton" default-binding="true">
+          <component id="a13ba" class="javax.swing.JRadioButton" binding="nonKofeinRadioButton">
             <constraints>
               <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -756,7 +756,7 @@
               <text value="Non-kofein"/>
             </properties>
           </component>
-          <component id="f655" class="javax.swing.JRadioButton" binding="nonKofeinRadioButton" default-binding="true">
+          <component id="f655" class="javax.swing.JRadioButton" binding="kofeinRadioButton">
             <constraints>
               <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
